@@ -31,6 +31,9 @@ namespace ReadingApp.Views
                 // 默认边框隐藏
                 TopBorder.Opacity = 0;
                 BottomBorder.Opacity = 0;
+                
+                // 确保窗口可以接收鼠标输入
+                this.Background = new SolidColorBrush(Color.FromArgb(1, 0, 0, 0));
             };
         }
 
