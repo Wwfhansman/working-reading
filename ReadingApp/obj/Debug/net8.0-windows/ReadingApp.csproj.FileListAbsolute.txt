@@ -22,3 +22,4 @@ C:\Users\ybbe\Desktop\wwf\项目文件wwf\阅读应用\ReadingApp\obj\Debug\net8
 C:\Users\ybbe\Desktop\wwf\项目文件wwf\阅读应用\ReadingApp\obj\Debug\net8.0-windows\ReadingApp.pdb
 C:\Users\ybbe\Desktop\wwf\项目文件wwf\阅读应用\ReadingApp\obj\Debug\net8.0-windows\ReadingApp.genruntimeconfig.cache
 C:\Users\ybbe\Desktop\wwf\项目文件wwf\阅读应用\ReadingApp\obj\Debug\net8.0-windows\ref\ReadingApp.dll
+C:\Users\ybbe\Desktop\wwf\项目文件wwf\阅读应用\ReadingApp\obj\Debug\net8.0-windows\ReadingApp.sourcelink.json

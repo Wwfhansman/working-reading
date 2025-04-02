@@ -6,11 +6,10 @@
         xmlns:local="clr-namespace:ReadingApp.Views"
         mc:Ignorable="d"
         Title="{Binding Book.Title}" Height="400" Width="600"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" AllowsTransparency="True" Background="#01000000"
         Topmost="{Binding IsTopMost}" 
         MouseMove="Window_MouseMove" 
-        MouseLeave="Window_MouseLeave"
-        BorderBrush="#20808080" BorderThickness="1">
+        MouseLeave="Window_MouseLeave">
     
     <Window.Resources>
         <Style x:Key="BorderStyle" TargetType="Border">
@@ -32,7 +31,7 @@
         </Style>
     </Window.Resources>
     
-    <Grid Background="#01FFFFFF">
+    <Grid Background="#01000000">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -63,7 +62,7 @@
         
         <!-- 中间内容区 - 显示文本 -->
         <Border Grid.Row="1" 
-                Background="Transparent">
+                Background="#01000000">
             <ScrollViewer VerticalScrollBarVisibility="Hidden" Name="ContentScrollViewer">
                 <TextBlock Text="{Binding PageText}" 
                            TextWrapping="Wrap" 
