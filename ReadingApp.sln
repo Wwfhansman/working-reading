@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingApp", "ReadingApp\ReadingApp.csproj", "{75CFD1B7-D20E-4EAB-B5F9-B85AD2FC47A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75CFD1B7-D20E-4EAB-B5F9-B85AD2FC47A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CFD1B7-D20E-4EAB-B5F9-B85AD2FC47A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CFD1B7-D20E-4EAB-B5F9-B85AD2FC47A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CFD1B7-D20E-4EAB-B5F9-B85AD2FC47A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C99B9DD3-3F97-4E0F-9EF3-B63C9C26AA41}
+	EndGlobalSection
+EndGlobal 
