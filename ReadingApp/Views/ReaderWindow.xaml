@@ -64,12 +64,37 @@
         <Border Grid.Row="1" 
                 Background="#01000000">
             <ScrollViewer VerticalScrollBarVisibility="Hidden" Name="ContentScrollViewer">
-                <TextBlock Text="{Binding PageText}" 
-                           TextWrapping="Wrap" 
-                           Margin="20"
-                           Background="#00FFFFFF"
-                           Foreground="{Binding IsMouseOver, Converter={StaticResource VisibilityToForegroundConverter}}"
-                           FontSize="18"/>
+                <StackPanel>
+                    <TextBlock Text="{Binding PageText}" 
+                               TextWrapping="Wrap" 
+                               Margin="20,20,20,10"
+                               Background="#00FFFFFF"
+                               Foreground="{Binding IsMouseOver, Converter={StaticResource VisibilityToForegroundConverter}}"
+                               FontSize="18"/>
+                    
+                    <!-- 页面内翻页按钮 -->
+                    <StackPanel Orientation="Horizontal" 
+                                HorizontalAlignment="Center" 
+                                Visibility="{Binding IsMouseOver, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                Margin="0,10,0,20">
+                        <Button Content="上一页" 
+                                Command="{Binding PreviousPageCommand}"
+                                Width="100"
+                                Height="30"
+                                Margin="0,0,20,0"
+                                Background="#80000000"
+                                Foreground="White"
+                                BorderBrush="#40FFFFFF"/>
+                        
+                        <Button Content="下一页" 
+                                Command="{Binding NextPageCommand}"
+                                Width="100"
+                                Height="30"
+                                Background="#80000000"
+                                Foreground="White"
+                                BorderBrush="#40FFFFFF"/>
+                    </StackPanel>
+                </StackPanel>
             </ScrollViewer>
         </Border>
         

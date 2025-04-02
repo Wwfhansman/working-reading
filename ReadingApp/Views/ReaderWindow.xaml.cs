@@ -118,39 +118,12 @@ namespace ReadingApp.Views
 
         protected override void OnPreviewMouseWheel(MouseWheelEventArgs e)
         {
-            // 获取当前ScrollViewer的引用
+            // 只在当前页面内滚动，不自动翻页
             var scrollViewer = FindScrollViewer();
             if (scrollViewer != null)
             {
-                // 判断是否已经滚动到底部或顶部
-                bool isAtBottom = scrollViewer.VerticalOffset >= scrollViewer.ScrollableHeight;
-                bool isAtTop = scrollViewer.VerticalOffset == 0;
-
-                // 如果滚动到底部且向下滚动，或滚动到顶部且向上滚动，则翻页
-                if ((isAtBottom && e.Delta < 0) || (isAtTop && e.Delta > 0))
-                {
-                    if (e.Delta > 0)
-                    {
-                        // 上一页
-                        if (_viewModel.PreviousPageCommand.CanExecute(null))
-                        {
-                            _viewModel.PreviousPageCommand.Execute(null);
-                        }
-                    }
-                    else
-                    {
-                        // 下一页
-                        if (_viewModel.NextPageCommand.CanExecute(null))
-                        {
-                            _viewModel.NextPageCommand.Execute(null);
-                        }
-                    }
-                }
-                else
-                {
-                    // 否则正常滚动
-                    scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - e.Delta / 3);
-                }
+                // 正常滚动，速度调整为更合理的值
+                scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - e.Delta / 3);
                 e.Handled = true;
             }
         }

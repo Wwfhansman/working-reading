@@ -8,5 +8,6 @@
         <converters:BooleanInvertConverter x:Key="BooleanInvertConverter"/>
         <converters:VisibilityToBrushConverter x:Key="VisibilityToBrushConverter"/>
         <converters:VisibilityToForegroundConverter x:Key="VisibilityToForegroundConverter"/>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </Application.Resources>
 </Application> 
