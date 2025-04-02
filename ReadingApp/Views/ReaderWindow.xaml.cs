@@ -20,6 +20,10 @@ namespace ReadingApp.Views
             _viewModel = new ReaderViewModel(book, bookService);
             DataContext = _viewModel;
             
+            // 订阅滚动事件
+            _viewModel.ScrollToTopRequested += (s, e) => ScrollToTop();
+            _viewModel.ScrollToBottomRequested += (s, e) => ScrollToBottom();
+            
             // 确保窗口正确显示
             Loaded += (s, e) => {
                 Activate();
@@ -135,6 +139,18 @@ namespace ReadingApp.Views
         private ScrollViewer FindScrollViewer()
         {
             return ContentScrollViewer;
+        }
+
+        // 滚动到顶部方法
+        private void ScrollToTop()
+        {
+            ContentScrollViewer.ScrollToTop();
+        }
+
+        // 滚动到底部方法
+        private void ScrollToBottom()
+        {
+            ContentScrollViewer.ScrollToBottom();
         }
     }
 } 

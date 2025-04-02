@@ -94,6 +94,10 @@ namespace ReadingApp.ViewModels
         public ICommand ToggleTopMostCommand { get; }
         public ICommand CloseCommand { get; }
 
+        // 添加事件，通知页面需要滚动到顶部或底部
+        public event EventHandler? ScrollToTopRequested;
+        public event EventHandler? ScrollToBottomRequested;
+
         public ReaderViewModel(Book book, IBookService bookService)
         {
             _book = book;
@@ -138,19 +142,27 @@ namespace ReadingApp.ViewModels
             }
         }
 
-        private void PreviousPage()
+        public void PreviousPage()
         {
             if (CurrentPageNumber > 1)
             {
                 CurrentPageNumber--;
+                LoadPage(CurrentPageNumber);
+                
+                // 发送通知，页面需要滚动到底部
+                ScrollToBottomRequested?.Invoke(this, EventArgs.Empty);
             }
         }
 
-        private void NextPage()
+        public void NextPage()
         {
             if (CurrentPageNumber < TotalPages)
             {
                 CurrentPageNumber++;
+                LoadPage(CurrentPageNumber);
+                
+                // 发送通知，页面需要滚动到顶部
+                ScrollToTopRequested?.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -161,6 +173,9 @@ namespace ReadingApp.ViewModels
                 if (pageNumber >= 1 && pageNumber <= TotalPages)
                 {
                     CurrentPageNumber = pageNumber;
+                    
+                    // 跳转到页面后，滚动到顶部
+                    ScrollToTopRequested?.Invoke(this, EventArgs.Empty);
                 }
                 else
                 {
