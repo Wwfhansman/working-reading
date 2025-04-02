@@ -4,5 +4,9 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <Nullable>enable</Nullable>
+    <AssemblyName>凡哥阅读器</AssemblyName>
+    <Product>凡哥阅读器</Product>
+    <Description>一个简洁的阅读器应用</Description>
+    <Company>凡哥工作室</Company>
   </PropertyGroup>
 </Project> 

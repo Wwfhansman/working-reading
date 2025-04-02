@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "ReadingApp/1.0.0": {
+      "凡哥阅读器/1.0.0": {
         "runtime": {
-          "ReadingApp.dll": {}
+          "凡哥阅读器.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "ReadingApp/1.0.0": {
+    "凡哥阅读器/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

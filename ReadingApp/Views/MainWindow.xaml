@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:ReadingApp.ViewModels"
         xmlns:converters="clr-namespace:ReadingApp.Converters"
         mc:Ignorable="d"
-        Title="隐藏式阅读器" Height="500" Width="800">
+        Title="凡哥阅读器" Height="500" Width="800">
     
     <Window.Resources>
         <converters:BooleanInvertConverter x:Key="BooleanInvertConverter"/>

@@ -76,7 +76,7 @@ namespace ReadingApp.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ReadingApp;component/views/readerwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/凡哥阅读器;component/views/readerwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ReaderWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
